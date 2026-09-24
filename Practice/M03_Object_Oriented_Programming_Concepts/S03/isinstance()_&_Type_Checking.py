@@ -21,7 +21,7 @@ if isinstance(x,(int,float)):
     print("x is a number")
 else:
     print("x is a string")
-
+'''
 #checking of object's class
 class A:
 
@@ -42,3 +42,4 @@ print(type(obj) == B)
 print(type(obj) == A)
 print(isinstance(obj, B))
 print(isinstance(obj, A))
+'''

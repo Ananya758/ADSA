@@ -1,44 +1,36 @@
 '''
-1480. Running sum of 1D array
-1732. Find the highest altitude
+1480 : Running Sum of 1d Array
+724 : Find Pivot Index
+1991 : Find the Middle Index in Array
+1732 : Find the Highest Altitude
+523. Continuous Subarray Sum
 '''
-nums = [1, 2, 3, 4]
+'''
+Input: nums = [1,2,3,4]
+Output: [1,3,6,10]
+'''
+#Brute-force
+nums = [1,2,3,4]
 res = [0] * (len(nums))
 for i in range(len(nums)):
     curr_sum = 0
-    for j in range(0, i + 1):
+    for j in range(0,i+1):
         curr_sum += nums[j]
     res[i] = curr_sum
-print(res)  
+print(res)
 
-nums = [1, 2, 3, 4]
-for i in range(1, len(nums)):
-    nums[i] = nums[i - 1] + nums[i]
+#optimal solution
+nums = [1,2,3,4]
+for i in range(1,len(nums)):
+    nums[i] = nums[i-1] + nums[i]
 print(nums)
-#
-def largestAltitude(gain: List[int]) -> int:
-    n = len(gain)
-    alt = [0] * (n + 1)
-    for i in range(1, n + 1):
-        alt[i] = alt[i - 1] + gain[i - 1]
-    return max(alt)
-gain = [-5,1,5,0,-7]
-print(largestAltitude(gain))
+
+#1732 : Find the Highest Altitude
 
 '''
-curr_alt = 0
-max_alt = 0
-for g in gain:
-    curr_alt += g
-    max_alt = max(curr_alt, max_alt)
-return max_alt
-
+724 : Find Pivot Index
+523. Continuous Subarray Sum
+1652. Defuse the Bomb
+1248. Count Number of Nice Subarrays
+1763. Longest Nice Substring
 '''
-
-
-
-724
-523
-1652
-1248
-1763
